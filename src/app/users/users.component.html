@@ -1,0 +1,37 @@
+<input type="button" value="Log out" (click)="logOut()">
+<table>
+    <thead>
+        <tr>
+            <th>name</th>
+            <th>lastname</th>
+            <th>email</th>
+            <th>docuemnt</th>
+            <th>update</th>
+            <th>delete</th>
+        </tr>
+    </thead>
+    <tbody *ngFor="let us of usersList">
+        <tr>
+            <td>
+                {{us.NAME}}
+            </td>
+            <td>
+                {{us.LASTNAME}}
+            </td>
+            <td>
+                {{us.EMAIL}}
+            </td>
+            <td>
+                {{us.DOCUMENT}}
+            </td>
+            <td>
+                <input type="button" value="update">
+            </td>
+            <td>
+                <input type="button" value="delete">
+            </td>
+        </tr>
+
+    </tbody>
+</table>
+<app-register></app-register>
